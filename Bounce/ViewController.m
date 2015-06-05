@@ -32,7 +32,7 @@
 
 - (void)go {
     UILabel *label = [UILabel new];
-    label.text = @"Bounce!";
+    label.text = @"FALLAHWAZHERE😈";
     label.textColor = [UIColor blackColor];
     [label sizeToFit];
 
