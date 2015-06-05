@@ -31,10 +31,15 @@
 }
 
 - (void)go {
+
+
     UILabel *label = [UILabel new];
-    label.text = @"Bounce!";
-    label.textColor = [UIColor blackColor];
+    label.text = @"wazzzzuppp!";
+
+    NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
+    label.textColor = colorArray[arc4random_uniform((u_int32_t)colorArray.count)];
     [label sizeToFit];
+
 
     [self.view addSubview:label];
 
