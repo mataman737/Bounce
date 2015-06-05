@@ -19,6 +19,8 @@
 
 - (NSArray *)words {
     return @[@"FOLLOW", @"ME", @"RN", @"OR", @"ELSE",@"🍌"];
+
+    //LOL
 }
 
 - (id)randomWord {
