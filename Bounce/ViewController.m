@@ -16,6 +16,16 @@
 
 @implementation ViewController
 
+
+- (NSArray *)words {
+    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡"];
+}
+
+- (id)randomWord {
+    return self.words[arc4random_uniform(self.words.count)];
+}
+
+
 - (void)viewDidLoad {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
@@ -32,7 +42,7 @@
 
 - (void)go {
     UILabel *label = [UILabel new];
-    label.text = @"Bounce!";
+    label.text = [self randomWord];
     label.textColor = [UIColor blackColor];
     [label sizeToFit];
 
