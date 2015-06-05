@@ -10,10 +10,18 @@
 
 @implementation BounceLabel
 
+- (NSArray *)words {
+    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡"];
+}
+
+- (id)randomWord {
+    return self.words[arc4random_uniform(self.words.count)];
+}
+
 -(instancetype)init {
     self = [super init];
     if (self) {
-        self.text = @"Bounce";
+        self.text = [self randomWord];
         [self sizeToFit];
         self.textColor = [UIColor blackColor];
     }

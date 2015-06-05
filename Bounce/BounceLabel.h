@@ -11,5 +11,6 @@
 @interface BounceLabel : UILabel
 
 -(void)randomlyPlaceInView:(UIView *)view;
+@property (readonly)NSArray *words;
 
 @end
