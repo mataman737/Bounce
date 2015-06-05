@@ -18,11 +18,15 @@
 
 
 - (NSArray *)words {
+<<<<<<< HEAD
     return @[@"TEST", @"COLORS", @"POOPY", @"BUTTS", @"POOP"];
 }
 
 - (NSArray *)colors {
     return @[[UIColor purpleColor], [UIColor redColor], [UIColor orangeColor], [UIColor blueColor], [UIColor greenColor]];
+=======
+    return @[@"FOLLOW", @"ME", @"RN", @"OR", @"ELSE",@"🍌"];
+>>>>>>> d0c906aa4344e14821535c22071939480ad69ef1
 }
 
 - (id)randomWord {
@@ -50,10 +54,28 @@
 
 - (void)go {
     UILabel *label = [UILabel new];
+
+    label.text = @"💩💩BEAST💩SWAG💩YOOO💩💩";
+
+
+    label.text = @"FALLAHWAZHERE😈";
+
     label.text = [self randomWord];
+<<<<<<< HEAD
     label.textColor = [self randomColor];
     label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"max"]];
     label.frame = CGRectMake(0, 0, 100, 100);
+=======
+
+
+    label.textColor = [UIColor blackColor];
+
+    NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
+    label.textColor = colorArray[arc4random_uniform((u_int32_t)colorArray.count)];
+
+    [label sizeToFit];
+
+>>>>>>> d0c906aa4344e14821535c22071939480ad69ef1
 
     [self.view addSubview:label];
 
@@ -61,12 +83,11 @@
     f.origin.y = 10;
     f.origin.x = arc4random_uniform(self.view.bounds.size.width - label.bounds.size.width);
     label.frame = f;
-
     [self.gravity addItem:label];
     [self.collider addItem:label];
 
     label.alpha = 0;
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         label.alpha = 1;
     }];
 
