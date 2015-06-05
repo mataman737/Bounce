@@ -18,7 +18,7 @@
 
 
 - (NSArray *)words {
-    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡"];
+    return @[@"TEST", @"COLORS", @"POOPY", @"BUTTS", @"POOP"];
 }
 
 - (id)randomWord {
