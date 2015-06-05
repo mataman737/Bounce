@@ -44,15 +44,15 @@
 
 
     UILabel *label = [UILabel new];
-<<<<<<< HEAD
+
     label.text = @"💩💩BEAST💩SWAG💩YOOO💩💩";
-=======
-<<<<<<< HEAD
+
+
     label.text = @"FALLAHWAZHERE😈";
-=======
+
     label.text = [self randomWord];
->>>>>>> 275227bb48dd622c10df105162017cc75b2a6290
->>>>>>> SAVAGAEBRANCH
+
+
     label.textColor = [UIColor blackColor];
 
     NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
