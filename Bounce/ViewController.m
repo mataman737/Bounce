@@ -16,6 +16,16 @@
 
 @implementation ViewController
 
+
+- (NSArray *)words {
+    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡"];
+}
+
+- (id)randomWord {
+    return self.words[arc4random_uniform(self.words.count)];
+}
+
+
 - (void)viewDidLoad {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
@@ -31,10 +41,25 @@
 }
 
 - (void)go {
+
+
     UILabel *label = [UILabel new];
+<<<<<<< HEAD
     label.text = @"💩💩BEAST💩SWAG💩YOOO💩💩";
+=======
+<<<<<<< HEAD
+    label.text = @"FALLAHWAZHERE😈";
+=======
+    label.text = [self randomWord];
+>>>>>>> 275227bb48dd622c10df105162017cc75b2a6290
+>>>>>>> SAVAGAEBRANCH
     label.textColor = [UIColor blackColor];
+
+    NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
+    label.textColor = colorArray[arc4random_uniform((u_int32_t)colorArray.count)];
+
     [label sizeToFit];
+
 
     [self.view addSubview:label];
 
