@@ -21,8 +21,16 @@
     return @[@"TEST", @"COLORS", @"POOPY", @"BUTTS", @"POOP"];
 }
 
+- (NSArray *)colors {
+    return @[[UIColor purpleColor], [UIColor redColor], [UIColor orangeColor], [UIColor blueColor], [UIColor greenColor]];
+}
+
 - (id)randomWord {
     return self.words[arc4random_uniform(self.words.count)];
+}
+
+- (id)randomColor {
+    return self.colors[arc4random_uniform(self.colors.count)];
 }
 
 
@@ -41,17 +49,11 @@
 }
 
 - (void)go {
-
-
     UILabel *label = [UILabel new];
     label.text = [self randomWord];
-    label.textColor = [UIColor blackColor];
-
-    NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
-    label.textColor = colorArray[arc4random_uniform((u_int32_t)colorArray.count)];
-
-    [label sizeToFit];
-
+    label.textColor = [self randomColor];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"max"]];
+    label.frame = CGRectMake(0, 0, 100, 100);
 
     [self.view addSubview:label];
 
