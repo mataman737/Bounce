@@ -37,9 +37,6 @@
 
 - (void)go {
     BounceLabel *label = [BounceLabel new];
-    
-
-    [self.view addSubview:label];
     [label randomlyPlaceInView:self.view];
 
     [self.gravity addItem:label];
