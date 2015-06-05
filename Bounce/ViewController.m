@@ -17,10 +17,6 @@
 
 @implementation ViewController
 
-
-
-
-
 - (void)viewDidLoad {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
