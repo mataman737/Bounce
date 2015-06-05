@@ -32,7 +32,7 @@
 
 - (void)go {
     UILabel *label = [UILabel new];
-    label.text = @"💩💩💩SWAG💩💩💩";
+    label.text = @"💩💩BEAST💩SWAG💩YOOO💩💩";
     label.textColor = [UIColor blackColor];
     [label sizeToFit];
 
