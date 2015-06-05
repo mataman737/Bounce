@@ -42,7 +42,6 @@
     f.origin.y = 10;
     f.origin.x = arc4random_uniform(self.view.bounds.size.width - label.bounds.size.width);
     label.frame = f;
-
     [self.gravity addItem:label];
     [self.collider addItem:label];
 
