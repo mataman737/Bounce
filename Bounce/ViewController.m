@@ -47,7 +47,7 @@
     [self.collider addItem:label];
 
     label.alpha = 0;
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         label.alpha = 1;
     }];
 
