@@ -17,6 +17,19 @@
 
 @implementation ViewController
 
+
+- (NSArray *)words {
+    return @[@"💩", @"github.com/fallaha13",@"🍌"];
+
+    //LOL
+    //github.com/fallaha13
+}
+
+- (id)randomWord {
+    return self.words[arc4random_uniform(self.words.count)];
+}
+
+
 - (void)viewDidLoad {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
