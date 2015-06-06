@@ -51,7 +51,10 @@
 
 
     if (self.view.subviews.count > 50) {
-        [[self.view.subviews objectAtIndex:0] removeFromSuperview];
+        UIView *view = [self.view.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+        [self.collider removeItem:view];
+        [self.gravity removeItem:view];
     }
 }
 
