@@ -21,6 +21,7 @@
     return @[@"FOLLOW", @"ME", @"RN", @"OR", @"ELSE",@"🍌"];
 
     //LOL
+    //github.com/fallaha13
 }
 
 - (id)randomWord {
