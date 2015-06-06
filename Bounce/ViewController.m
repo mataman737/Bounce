@@ -19,7 +19,7 @@
 
 
 - (NSArray *)words {
-    return @[@"FOLLOW", @"ME", @"RN", @"OR", @"ELSE",@"🍌"];
+    return @[@"💩", @"github.com/fallaha13",@"🍌"];
 
     //LOL
     //github.com/fallaha13
