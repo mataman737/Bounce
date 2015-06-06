@@ -11,7 +11,7 @@
 @implementation BounceLabel
 
 - (NSArray *)words {
-    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡"];
+    return @[@"word1", @"bounce", @"chairs", @"👾", @"😡",@"FOLLOW", @"ME", @"RN", @"OR", @"ELSE",@"🍌"];
 }
 
 - (id)randomWord {

@@ -28,7 +28,6 @@
     [self.animator addBehavior:self.collider];
 
     [self go];
-
 }
 
 - (void)go {
