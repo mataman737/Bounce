@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BounceLabel.h"
 
 @interface ViewController ()
 @property UIDynamicAnimator *animator;
@@ -40,43 +41,17 @@
     [self.animator addBehavior:self.collider];
 
     [self go];
-
 }
 
 - (void)go {
-
-
-    UILabel *label = [UILabel new];
-
-    label.text = @"💩💩BEAST💩SWAG💩YOOO💩💩";
-
-
-    label.text = @"FALLAHWAZHERE😈";
-
-    label.text = [self randomWord];
-
-
-    label.textColor = [UIColor blackColor];
+    BounceLabel *label = [BounceLabel new];
+    [label randomlyPlaceInView:self.view];
 
     NSArray *colorArray = @[[UIColor purpleColor], [UIColor greenColor], [UIColor blueColor]];
     label.textColor = colorArray[arc4random_uniform((u_int32_t)colorArray.count)];
 
-    [label sizeToFit];
-
-
-    [self.view addSubview:label];
-
-    CGRect f = label.frame;
-    f.origin.y = 10;
-    f.origin.x = arc4random_uniform(self.view.bounds.size.width - label.bounds.size.width);
-    label.frame = f;
     [self.gravity addItem:label];
     [self.collider addItem:label];
-
-    label.alpha = 0;
-    [UIView animateWithDuration:0.1 animations:^{
-        label.alpha = 1;
-    }];
 
     UIDynamicItemBehavior *physics = [[UIDynamicItemBehavior alloc] initWithItems:@[label]];
     physics.elasticity = arc4random_uniform(1000.0) / 1000.0;
